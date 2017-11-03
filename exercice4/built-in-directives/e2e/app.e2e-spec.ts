@@ -1,24 +1,14 @@
-import { BuiltInDirectivesPage } from './app.po';
+import { AppPage } from './app.po';
 
 describe('built-in-directives App', () => {
-  let page: BuiltInDirectivesPage;
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new BuiltInDirectivesPage();
+    page = new AppPage();
   });
 
-  it('should load the page', () => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getHeaderText()).toEqual(`Angular 2 Built-in Directives`);
-    expect(page.getIntroText()).toContain(`The ng-book team`);
-  });
-
-  it('should have tabs', () => {
-    page.navigateTo();
-    page.clickTab('NgFor');
-    page.clickTab('NgSwitch');
-    page.clickTab('NgStyle');
-    page.clickTab('NgClass');
-    page.clickTab('NgNonBindable');
+    expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
 });

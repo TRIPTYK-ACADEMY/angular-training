@@ -1,0 +1,20 @@
+<!-- step1
+<!-- <div class="ui items">
+  <ul>
+    <li *ngFor="let myProduct of productList">
+    {{myProduct.name}}
+    <img src="{{myProduct.imageUrl}}"/>
+  </li>
+</ul>
+</div> -->
+<!-- step2
+<div class="ui items">
+  <app-product-row *ngFor="let myProduct of productList" [product]="myProduct">
+  </app-product-row>
+</div> -->
+<!-- step3-->
+ <div class="ui items">
+  <!-- <app-product-row *ngFor="let myProduct of productList" [product]="myProduct" (click)='clicked(myProduct)'> -->
+  <app-product-row *ngFor="let myProduct of productList" [product]="myProduct" (click)='clicked(myProduct)' [class.selected]="isSelected(myProduct)">
+  </app-product-row>
+</div>

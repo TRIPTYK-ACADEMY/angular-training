@@ -31,7 +31,7 @@ form.form:after {
 }
 
 .meta {
-  color: #9A9A9A
+  color: #9A9A9A;
 }
 
 .ui.grid>.row>.column.votes {
@@ -50,3 +50,4 @@ ul.ui.list li:before {
 *{
   color: #ffffff;
 }
+
